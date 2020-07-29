@@ -1,0 +1,16 @@
+.img-div{
+    padding-top: 100px;
+    display: inline-flex;
+    flex-grow: inherit;
+ 
+}
+#bfast1{
+    padding-right: 2px;
+}
+#bfast2{
+    padding-right: 2px;
+}
+p{
+    padding-right:5px;
+    padding-left: 5px;
+}
