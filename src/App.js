@@ -7,10 +7,10 @@ import Teatime from './components/teatime';
 import Menu from "./menu";
 import About from "./about";
 import {
-  BrowserRouter as Router,
-  Switch,
+  HashRouter as Router,
+  
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 import Desifood from './components/desi';
 
@@ -25,21 +25,17 @@ function App() {
               <div>
                 <nav>
               <ul className="header">
-                <li><Link to="./about.js" className="head-link" >About </Link></li>
-                <li><Link to="./menu.js"  className="head-link" >Our Menu </Link></li>
+                <li><li><NavLink to="/"  className="head-link">Home</NavLink></li></li>
+                <li><NavLink to="/about" className="head-link" target="blank" >About </NavLink></li>
+                <li><NavLink to="/menu"  className="head-link" target="blank">Our Menu </NavLink></li>
                 <li><a className="head-link" href="mailto:anoom06@gmail.com">Contact</a></li>
               </ul>
               </nav>
-            
-              <Switch>
-                  <Route path="./about" component={About}>
-                    
-                  </Route>
-                  <Route path="./menu">
-                    <Menu />
-                  </Route>
-                
-                </Switch>
+            </div>
+              <div className="content">
+          
+            <Route path="/about" component={About}/>
+            <Route path="/menu" component={Menu}/>
                 </div>
                 </Router>  
       
